@@ -1,6 +1,6 @@
 import React, { createContext } from "react";
 
-interface ContextProps {
+export interface ContextProps {
   planet: string;
   setPlanet: React.Dispatch<React.SetStateAction<string>>;
 }

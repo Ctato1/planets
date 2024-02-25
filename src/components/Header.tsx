@@ -1,20 +1,23 @@
 import { AlignJustify, ChevronRight } from "lucide-react";
-import data from "../data.json";
 import { useEffect, useState } from "react";
 import { useContext } from "react";
 import { MyContext } from "./Context";
 
-export default function Header() {
+const Header: React.FC<{ data: TPlanet[] }> = ({ data }) => {
   const [bar, setBar] = useState<boolean>(false);
 
   const planetContext = useContext(MyContext);
-  
+
+  const handlePlanetChange = (planetName: string) => {
+    planetContext.setPlanet(planetName);
+    setBar(false);
+  };
 
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth < 768) {
         setBar(false);
-        return
+        return;
       }
       setBar(true);
     };
@@ -36,21 +39,21 @@ export default function Header() {
           className="md:hidden cursor-pointer"
           onClick={() => setBar((prev) => !prev)}
         >
-          <AlignJustify size={40} color={`${!bar ? '#fff' :'rgb(115, 115, 115)'}`}/>
+          <AlignJustify
+            size={40}
+            color={`${!bar ? "#fff" : "rgb(115, 115, 115)"}`}
+          />
         </div>
       </div>
 
       <ul
         className={`flex lg:gap-[30px] gap-[10px] flex-col flex-wrap md:flex-row md:flex-nowrap duration-300 ${
-          bar ? "translate-x-0" : "translate-x-full"
+          bar ? "translate-x-0" : "translate-x-full sm:translate-x-0"
         } absolute top-[93px] md:static backdrop-blur-[3px]`}
       >
         {data.map((item) => (
           <li
-            onClick={() => {
-              planetContext.setPlanet(item.name);
-              setBar(false)
-            }}
+            onClick={() => handlePlanetChange(item.name)}
             className={`${
               item.name !== "Neptune" ? "border-b-[1px] border-gray-600" : ""
             }  md:border-b-0 text-[11px] font-[700] tracking-[1px] uppercase cursor-pointer flex w-screen 
@@ -72,4 +75,5 @@ export default function Header() {
       </ul>
     </header>
   );
-}
+};
+export default Header;
