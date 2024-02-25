@@ -1,26 +1,18 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: [
-    "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
-  ],
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
       screens: {
-        'sm': '400px',
-        'md': '768px',
-        'lg': '1024px',
-        'xl': '1280px',
-        '2xl': '1536px',
-        'custom': {'min': '640px', 'max': '767px'},
+        "2xl": "1440px",
       },
       fontFamily: {
-        'spartan': ['Spartan', 'sans-serif'],
+        spartan: ["Spartan", "sans-serif"],
       },
       backgroundImage: {
-        'hero-pattern': "url('/assets/background-stars.svg')",
-      }
+        "hero-pattern": "url('/assets/background-stars.svg')",
+      },
     },
   },
   plugins: [],
-}
+};
