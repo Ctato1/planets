@@ -47,6 +47,9 @@ export default function Planets({ info, color, setInfo }: PlanetsProps) {
           </li>
         </ul>
       </header>
+      <section>
+        
+      </section>
     </main>
   );
 }
