@@ -34,7 +34,6 @@ function App() {
     )[0];
     setColor(selectedPlanet.color);
     setPlanetData(selectedPlanet);
-    console.log(planetData);
   }, [info, planetContext.planet, planetData]);
 
   return (
@@ -43,7 +42,7 @@ function App() {
         className={`bg-hero-pattern bg-center bg-no-repeat bg-cover   h-screen  mx-auto bg-[#070724] font-spartan overflow-x-hidden`}
       >
         <Header data={data} />
-        <Planets color={color} info={info} setInfo={setInfo} />
+        <Planets color={color} info={info} setInfo={setInfo} data={planetData}/>
       </section>
     </MyContext.Provider>
   );

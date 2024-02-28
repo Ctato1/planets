@@ -1,4 +1,6 @@
 type TPlanet = {
+  height: string;
+  width: string;
   name: string;
   overview: {
     content: string;

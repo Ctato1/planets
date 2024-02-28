@@ -8,6 +8,7 @@ export default {
       },
       fontFamily: {
         spartan: ["Spartan", "sans-serif"],
+        antonio: ['Antonio', 'sans-serif'],
       },
       backgroundImage: {
         "hero-pattern": "url('/assets/background-stars.svg')",
