@@ -22,7 +22,9 @@
       "internal": "/assets/planet-mercury-internal.svg",
       "geology": "/assets/geology-mercury.png"
     },
-    "color": "#DEF4FC"
+    "color": "#DEF4FC",
+    "width": "111px",
+    "height": "111px"
   },
   {
     "name": "Venus",
@@ -47,7 +49,9 @@
       "internal": "/assets/planet-venus-internal.svg",
       "geology": "/assets/geology-venus.png"
     },
-    "color": "#F7CC7F"
+    "color": "#F7CC7F",
+    "width": "154px",
+    "height": "154px"
   },
   {
     "name": "Earth",
@@ -72,7 +76,9 @@
       "internal": "/assets/planet-earth-internal.svg",
       "geology": "/assets/geology-earth.png"
     },
-    "color": "#545BFE"
+    "color": "#545BFE",
+    "width": "173px",
+    "height": "173px"
   },
   {
     "name": "Mars",
@@ -97,7 +103,9 @@
       "internal": "/assets/planet-mars-internal.svg",
       "geology": "/assets/geology-mars.png"
     },
-    "color": "#FF6A45"
+    "color": "#FF6A45",
+    "width": "129px",
+    "height": "129px"
   },
   {
     "name": "Jupiter",
@@ -122,7 +130,9 @@
       "internal": "/assets/planet-jupiter-internal.svg",
       "geology": "/assets/geology-jupiter.png"
     },
-    "color": "#ECAD7A"
+    "color": "#ECAD7A",
+    "width": "224px",
+    "height": "224px"
   },
   {
     "name": "Saturn",
@@ -147,7 +157,9 @@
       "internal": "/assets/planet-saturn-internal.svg",
       "geology": "/assets/geology-saturn.png"
     },
-    "color": "#FCCB6B"
+    "color": "#FCCB6B",
+    "width": "256px",
+    "height": "256px"
   },
   {
     "name": "Uranus",
@@ -172,7 +184,9 @@
       "internal": "/assets/planet-uranus-internal.svg",
       "geology": "/assets/geology-uranus.png"
     },
-    "color": "#65F0D5"
+    "color": "#65F0D5",
+    "width": "176px",
+    "height": "176px"
   },
   {
     "name": "Neptune",
@@ -197,6 +211,8 @@
       "internal": "/assets/planet-neptune-internal.svg",
       "geology": "/assets/geology-neptune.png"
     },
-    "color": "#497EFA"
+    "color": "#497EFA",
+    "width": "173px",
+    "height": "173px"
   }
 ]
