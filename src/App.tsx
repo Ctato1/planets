@@ -19,6 +19,8 @@ const initialPlanetData: TPlanet = {
   temperature: "",
   images: { planet: "", internal: "", geology: "" },
   color: "",
+  height: "",
+  width: ""
 };
 
 function App() {
@@ -34,12 +36,13 @@ function App() {
     )[0];
     setColor(selectedPlanet.color);
     setPlanetData(selectedPlanet);
+    
   }, [info, planetContext.planet, planetData]);
-
+  
   return (
     <MyContext.Provider value={{ planet, setPlanet }}>
       <section
-        className={`bg-hero-pattern bg-center bg-no-repeat bg-cover   h-screen  mx-auto bg-[#070724] font-spartan overflow-x-hidden`}
+        className={`bg-hero-pattern bg-center bg-no-repeat bg-cover h-screen mx-auto bg-[#070724] font-spartan overflow-x-hidden`}
       >
         <Header data={data} />
         <Planets color={color} info={info} setInfo={setInfo} data={planetData}/>

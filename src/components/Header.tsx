@@ -47,8 +47,8 @@ const Header: React.FC<{ data: TPlanet[] }> = ({ data }) => {
       </div>
 
       <ul
-        className={`flex lg:gap-[30px] gap-[10px] flex-col flex-wrap md:flex-row md:flex-nowrap duration-300 ${
-          bar ? "translate-x-0" : "translate-x-full sm:translate-x-0"
+        className={`flex lg:gap-[30px] gap-[10px] flex-col flex-wrap md:flex-row md:flex-nowrap duration-500 ${
+          bar ? "translate-x-0" : "translate-x-full md:translate-x-0"
         } absolute top-[93px] md:static backdrop-blur-[3px]`}
       >
         {data.map((item) => (

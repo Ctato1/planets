@@ -13,6 +13,16 @@ export default {
       backgroundImage: {
         "hero-pattern": "url('/assets/background-stars.svg')",
       },
+      keyframes: {
+        planetScale: {
+          '0%': { transform: 'scale(0)' },
+          '100%': { transform: 'scale(1)' },
+        }
+      },
+      animation: {
+        planetScale: 'planetScale 1s linear forward',
+      },
+      
     },
   },
   plugins: [],
