@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { useContext } from "react";
 import { MyContext } from "./Context";
 
-const Header: React.FC<{ data: TPlanet[] }> = ({ data }) => {
+const Header: React.FC<{ data: TPlanet[]}> = ({ data }) => {
   const [bar, setBar] = useState<boolean>(false);
 
   const planetContext = useContext(MyContext);
@@ -13,7 +13,14 @@ const Header: React.FC<{ data: TPlanet[] }> = ({ data }) => {
     setBar(false);
   };
 
+
+  
+
   useEffect(() => {
+    data.forEach(item=>(
+      console.log(item.name)
+      
+    ))
     const handleResize = () => {
       if (window.innerWidth < 768) {
         setBar(false);
@@ -24,7 +31,7 @@ const Header: React.FC<{ data: TPlanet[] }> = ({ data }) => {
     window.addEventListener("resize", handleResize);
     handleResize();
     return () => window.removeEventListener("resize", handleResize);
-  }, []);
+  }, [data, planetContext.planet]);
 
   return (
     <header
@@ -65,6 +72,12 @@ const Header: React.FC<{ data: TPlanet[] }> = ({ data }) => {
                 className={`md:hidden w-2 h-2 rounded-full`}
                 style={{ backgroundColor: `${item.color}` }}
               />
+              <span
+              className={`${
+                planetContext.planet.toUpperCase() === item.name.toUpperCase() ? "-translate-y-[10px]" : "translate-y-[-150px]"
+              } duration-500 w-[10px] h-1 absolute flex  top-[0px] `}
+              style={{ backgroundColor: item.color }}
+            ></span>
               {item.name}
             </div>
             <div className="md:hidden">
