@@ -13,14 +13,7 @@ const Header: React.FC<{ data: TPlanet[]}> = ({ data }) => {
     setBar(false);
   };
 
-
-  
-
   useEffect(() => {
-    data.forEach(item=>(
-      console.log(item.name)
-      
-    ))
     const handleResize = () => {
       if (window.innerWidth < 768) {
         setBar(false);
@@ -31,7 +24,7 @@ const Header: React.FC<{ data: TPlanet[]}> = ({ data }) => {
     window.addEventListener("resize", handleResize);
     handleResize();
     return () => window.removeEventListener("resize", handleResize);
-  }, [data, planetContext.planet]);
+  }, []);
 
   return (
     <header

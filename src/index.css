@@ -2,13 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
-.planet-animation{
-    animation:  animatedPlanet 30s infinite ease-in-out;
+.planet-animation {
+  animation: animatedPlanet 30s infinite ease-in-out;
 }
 
-@keyframes animatedPlanet{
-    from{
+@keyframes animatedPlanet {
+  from {
     transform: rotate(0deg);
-    }
-    to{transform: rotate(360deg);}
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
