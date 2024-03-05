@@ -44,6 +44,7 @@ export default function Planets({ info, color, setInfo, data }: PlanetsProps) {
     data,
   ]);
 
+  
   return (
     <main className="max-w-screen-2xl mx-auto">
       <header className="sm:hidden">
@@ -86,22 +87,18 @@ export default function Planets({ info, color, setInfo, data }: PlanetsProps) {
           </li>
         </ul>
       </header>
-      <section className="">
+      <section className="lg:flex lg:justify-between lg:items-center lg:mt-[106px] lg:mb-[47px] lg:mx-5">
         {/* image */}
         <div
-          className={`planet flex flex-col items-center justify-center  h-[300px] ${
-            scale ? "planet" : "planetnon"
-          }`}
+          className={`flex flex-col items-center justify-center h-[400px] lg:w-[50%] lg:h-full`}
         >
           <img
             src={info === "SURFACE" ? data.images.planet : image}
             alt={data.name}
-            className={`outline-none mt-11`}
+            className={`outline-none mt-11 planet-animation`}
             style={{
-              width: `${data.width}`,
-              height: `${data.height}`,
-              transition: "1s",
-              transform: `rotate(${rotate}deg) scale(${scale ? 1 : 0})`,
+              width: `calc(60px + ${data.width}) `,
+              height: `calc(60px + ${data.height}) `,
             }}
           />
           {info === "SURFACE" && (
@@ -121,12 +118,15 @@ export default function Planets({ info, color, setInfo, data }: PlanetsProps) {
           )}
         </div>
         {/* description */}
-        <div className="text-center px-[24px] flex items-center md:justify-between md:text-left">
-          <div className="md:w-[339px]">
-            <h1 className="text-white text-[40px] font-antonio font-thin">
+        <div className="text-center px-[24px] flex items-center
+         md:justify-between md:text-left
+         lg:flex-col lg:w-[50%]
+         ">
+          <div className="md:w-[339px] flex flex-col lg:gap-[20px] lg:w-[361px]">
+            <h1 className="text-white text-[40px] font-antonio font-thin lg:text-[80px]">
               {data.name.toUpperCase()}
             </h1>
-            <p className="text-white text-[11px] font-[400] leading-5 opacity-70">
+            <p className="text-white text-[11px] font-[400] leading-5 opacity-70 lg:text-[14px] lg:leading-6">
               {planetInfo.content}
             </p>
             <p className="text-white text-[11px] font-[400] leading-5 opacity-70 flex justify-center md:justify-start ">
@@ -140,7 +140,7 @@ export default function Planets({ info, color, setInfo, data }: PlanetsProps) {
               </a>{" "}
             </p>
           </div>
-          <div className="hidden md:block md:w-[281px] ">
+          <div className="hidden md:block md:w-[281px] lg:w-[361px]  lg:pt-[29px]">
             <ul className="text-white flex flex-col gap-[16px]">
               <li
                onClick={() => setInfo("OVERVIEW")}
@@ -160,9 +160,12 @@ export default function Planets({ info, color, setInfo, data }: PlanetsProps) {
             </ul>
           </div>
         </div>
+
+       
+      </section>
         {/* info */}
-        <div className="mt-[28px] ">
-          <ul className="text-white w-[100%] flex flex-col gap-[8px] mx-auto md:flex-row ">
+       <div className="mt-[28px] mb-10 w-[94%] mx-auto lg:w-[73%] ">
+          <ul className="text-white w-[100%] flex flex-col gap-[8px] mx-auto md:flex-row lg:gap-[30px]">
             <li className="border border-gray-300 px-[16px] py-[24px] flex justify-between md:flex-col md:w-[25%] md:py-[16px] md:px-[15px]">
               <span className="opacity-50 md:text-[8px]">ROTATION TIME</span>{" "}
               <span className="md:text-[24px]">{data.rotation.toUpperCase()}</span>
@@ -181,7 +184,6 @@ export default function Planets({ info, color, setInfo, data }: PlanetsProps) {
             </li>
           </ul>
         </div>
-      </section>
     </main>
   );
 }
