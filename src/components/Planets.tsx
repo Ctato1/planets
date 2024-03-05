@@ -130,11 +130,11 @@ export default function Planets({ info, color, setInfo, data }: PlanetsProps) {
               {planetInfo.content}
             </p>
             <p className="text-white text-[11px] font-[400] leading-5 opacity-70 flex justify-center md:justify-start ">
-              Source :{" "}
+              Source : 
               <a
                 href={planetInfo.source}
                 target="_blank"
-                className="cursor-pointer underline"
+                className="cursor-pointer underline ml-1"
               >
                 Wikipedia <ExternalLink className="inline" />
               </a>{" "}
@@ -165,22 +165,22 @@ export default function Planets({ info, color, setInfo, data }: PlanetsProps) {
       </section>
         {/* info */}
        <div className="mt-[28px] mb-10 w-[94%] mx-auto lg:w-[73%] ">
-          <ul className="text-white w-[100%] flex flex-col gap-[8px] mx-auto md:flex-row lg:gap-[30px]">
+          <ul className="text-white w-[100%] flex flex-col gap-[8px] mx-auto md:flex-row lg:gap-[30px] ">
             <li className="border border-gray-300 px-[16px] py-[24px] flex justify-between md:flex-col md:w-[25%] md:py-[16px] md:px-[15px]">
               <span className="opacity-50 md:text-[8px]">ROTATION TIME</span>{" "}
-              <span className="md:text-[24px]">{data.rotation.toUpperCase()}</span>
+              <span className="md:text-[24px] font-antonio">{data.rotation.toUpperCase()}</span>
             </li>
             <li className="border border-gray-300 px-[16px] py-[24px] flex justify-between md:flex-col md:w-[25%] md:py-[16px] md:px-[15px]">
               <span className="opacity-50 md:text-[8px]">REVOLUTION TIME</span>{" "}
-              <span className="md:text-[24px]">{data.revolution.toUpperCase()}</span>
+              <span className="md:text-[24px] font-antonio">{data.revolution.toUpperCase()}</span>
             </li>
             <li className="border border-gray-300 px-[16px] py-[24px] flex justify-between md:flex-col md:w-[25%] md:py-[16px] md:px-[15px]">
               <span className="opacity-50 md:text-[8px]">RADIUS</span>{" "}
-              <span className="md:text-[24px]">{data.radius.toUpperCase()}</span>
+              <span className="md:text-[24px] font-antonio">{data.radius.toUpperCase()}</span>
             </li>
             <li className="border border-gray-300 px-[16px] py-[24px] flex justify-between md:flex-col md:w-[25%] md:py-[16px] md:px-[15px]">
               <span className="opacity-50 md:text-[8px]">AVERAGE TEMP.</span>{" "}
-              <span className="md:text-[24px]">{data.temperature.toUpperCase()}</span>
+              <span className="md:text-[24px] font-antonio">{data.temperature.toUpperCase()}</span>
             </li>
           </ul>
         </div>

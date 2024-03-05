@@ -1,7 +1,21 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+/* fonts */
+@font-face {
+  font-family: 'Antonio';
+  font-style: normal;
+  font-weight: 400;
+  src: url('path/to/antonio-regular.woff2') format('woff2'),
+       url('path/to/antonio-regular.woff') format('woff');
+}
+@font-face {
+  font-family: 'Antonio';
+  font-style: normal;
+  font-weight: 700;
+  src: url('path/to/antonio-bold.woff2') format('woff2'),
+       url('path/to/antonio-bold.woff') format('woff');
+}
 .planet-animation {
   animation: animatedPlanet 30s infinite ease-in-out;
 }
